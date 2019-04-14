@@ -70,4 +70,16 @@ public class ParticipantRestController {
 		return new ResponseEntity<Participant>(participant, HttpStatus.OK);
 		
 	}
+	
+	// "/{meetingId}/participant/{participantID"}"
+	// "/{meetingId}/participants"
+	
+// potrzeba tez participant service	
+//	@RequestMapping(value = "/{id/participants}", method = RequestMethod.POST)
+//	public ResponseEntity<?> addParticipantToMeeting(@PathVariable("id") int id, @RequestBody Participant newParticipant) {
+//	     pobrac spotkanie
+//		pobrac uczestnika
+//		dodac uczestnika do spotkania (ma to meeting juz)
+//		zapisac spotkanie	
+//	 }
 }
