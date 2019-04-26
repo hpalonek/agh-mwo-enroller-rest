@@ -11,15 +11,20 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RestController;
 
+import com.company.enroller.model.Meeting;
 import com.company.enroller.model.Participant;
+import com.company.enroller.persistence.MeetingService;
 import com.company.enroller.persistence.ParticipantService;
 
 @RestController
 @RequestMapping("/participants")
+//@RestController
+//@RequestMapping("/meetings")
 public class ParticipantRestController {
 
 	@Autowired
 	ParticipantService participantService;
+	MeetingService meetingService;
 
 	@RequestMapping(value = "", method = RequestMethod.GET)
 	public ResponseEntity<?> getParticipants() {
@@ -71,15 +76,5 @@ public class ParticipantRestController {
 		
 	}
 	
-	// "/{meetingId}/participant/{participantID"}"
-	// "/{meetingId}/participants"
-	
-// potrzeba tez participant service	
-//	@RequestMapping(value = "/{id/participants}", method = RequestMethod.POST)
-//	public ResponseEntity<?> addParticipantToMeeting(@PathVariable("id") int id, @RequestBody Participant newParticipant) {
-//	     pobrac spotkanie
-//		pobrac uczestnika
-//		dodac uczestnika do spotkania (ma to meeting juz)
-//		zapisac spotkanie	
-//	 }
+
 }
